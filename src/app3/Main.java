@@ -11,10 +11,8 @@ public class Main {
 		do {
 			player.input(); // RockPaperScissorsクラスのinputメソッドを実行
 			cpu.random(); // RockPaperScissorsクラスのrandomメソッドを実行
-			System.out.println("処理２");
-			Logic.gameStart();
-			System.out.println("プレイヤー:" + player.disp() + "コンピューター：" + cpu.disp());
-			Logic.judgment(player.hund, cpu.hund);//勝負判定
+			Logic.gameStart(player.disp(), cpu.disp());
+			Logic.judgment(player.hund, cpu.hund);// 勝負判定
 		} while (player.hund == cpu.hund);
 	}
 }

@@ -10,19 +10,19 @@ public class RockPaperScissors {
 
 	// コンソールからの入力を受け取りフィールド変数へ格納するメソッド
 	public void input() {
-		boolean isError = false;
-		System.out.print("コンソールを使ってグーチョキパーを選んでね！\n1:グー 2:チョキ 3:パー\n>>");
+		boolean isError;
+		int hund;
 		do {
-			int hund = new Scanner(System.in).nextInt();
+			System.out.print("コンソールを使ってグーチョキパーを選んでね！\n1:グー 2:チョキ 3:パー\n>>");
+			hund = new Scanner(System.in).nextInt();
 			if (hund >= 1 && hund <= 3) {
+				isError = false;
 				this.hund = hund;
-				System.out.println("保存しました");
 			} else {
 				isError = true;
 				System.out.println("入力に誤りがあります。もう一度入力してください。");
 			}
-		} while (isError = true);
-		System.out.println("メソッド終了");
+		} while (isError == true);
 	}
 
 	// ランダムに１～３の数値を生成するメソッド
